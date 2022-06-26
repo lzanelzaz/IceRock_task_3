@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.recyclerview.widget.RecyclerView
 
 class ItemAdapter(
-    private val context: Context,
     private val dataset: List<Contact>
 ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
@@ -40,10 +42,18 @@ class ItemAdapter(
         val item = dataset[position]
         holder.textView.text = "${item.firstName} ${item.lastName}"
         holder.imageView.setImageResource(item.avatarResourceId)
+
+        holder.itemView.setOnClickListener { view: View ->
+            val lastNameShow : Boolean = item.lastName != ""
+            val bundle = bundleOf(
+                "lastNameShow" to lastNameShow,
+                "firstName" to item.firstName,
+                "lastName" to item.lastName,
+                "avatar" to item.avatarResourceId)
+
+            view.findNavController().navigate(R.id.action_contactsFragment_to_contactFragment, bundle)
+        }
     }
 
-    /**
-     * Return the size of your dataset (invoked by the layout manager)
-     */
     override fun getItemCount() = dataset.size
 }

@@ -26,23 +26,23 @@
             app:srcCompat="@drawable/default_avatar" />
 
         <TextView
-            android:id="@+id/lastName2"
+            android:id="@+id/lastNameInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lastName"
+            app:layout_constraintStart_toStartOf="@+id/firstNameInput"
+            tools:text="last name" />
+
+        <TextView
+            android:id="@+id/firstNameInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Last name"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/lastName"
-            app:layout_constraintStart_toEndOf="@+id/lastName" />
-
-        <TextView
-            android:id="@+id/firstName2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="First name"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/firstName"
-            app:layout_constraintStart_toStartOf="@+id/lastName2" />
+            app:layout_constraintStart_toEndOf="@id/firstName"
+            tools:text="first name" />
 
         <TextView
             android:id="@+id/firstName"
@@ -61,7 +61,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="15dp"
-            android:text="Last name"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/firstName" />
