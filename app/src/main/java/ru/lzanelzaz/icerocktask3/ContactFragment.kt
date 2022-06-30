@@ -10,12 +10,8 @@ import ru.lzanelzaz.icerocktask3.databinding.FragmentContactBinding
 import ru.lzanelzaz.icerocktask3.databinding.FragmentContactsBinding
 
 class ContactFragment : Fragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?): View? {
         val binding = FragmentContactBinding.inflate(inflater, container, false)
         binding.imageView.setImageResource(requireArguments().getInt("avatar"))
         binding.firstNameInput.text = requireArguments().getString("firstName")
