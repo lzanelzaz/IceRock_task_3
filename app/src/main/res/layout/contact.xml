@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="contact"
+            type="ru.lzanelzaz.icerocktask3.Contact" />
+    </data>
+
 <LinearLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
+        android:transitionName="@{@string/start_transition(contact.firstName, contact.lastName)}"
+        android:transitionGroup="true"
         android:id="@+id/materialCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,10 +41,10 @@ android:orientation="vertical">
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:scaleType="centerCrop"
-            app:shapeAppearanceOverlay="@style/roundedImageView"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
             tools:srcCompat="@drawable/default_avatar" />
 
         <TextView
@@ -43,6 +54,7 @@ android:orientation="vertical">
             android:layout_marginStart="16dp"
             android:textSize="16sp"
             android:layout_gravity="center_vertical"
+            android:text="@{contact.firstName + ' ' + contact.lastName}"
             tools:text="text" />
 
     </LinearLayout>
@@ -55,3 +67,5 @@ android:orientation="vertical">
         app:dividerInsetStart="112dp" />
 
 </LinearLayout>
+
+</layout>
