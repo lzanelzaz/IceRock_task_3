@@ -1,5 +1,5 @@
 # IceRock_task_3
- IceRock task 3 User Interface
+ IceRock task 3 User Interface практическое задание
 
 1. Создать приложение с шаблона Empty Activity
 2. Создать data class Contact(val firstName: String, val lastName: String, val avatarResourceId: Int)
