@@ -9,4 +9,4 @@
 6. На фрагменте ContactFragment с помощью ConstraintLayout сверстать UI экрана просмотра контакта
 7. С помощью Android Navigation Component сделать переходы между списком и просмотром контакта
 
-![screenshot](https://gifyu.com/image/SKxvo)
+![screenshot](https://s8.gifyu.com/images/video_2022-07-01_13-20-18.gif)
