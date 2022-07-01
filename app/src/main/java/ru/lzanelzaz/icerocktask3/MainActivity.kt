@@ -6,12 +6,12 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.RecyclerView
 
-val contacts : List<Contact> = listOf(
+val contacts: List<Contact> = listOf(
     Contact("Lev", "Tolstoi", R.drawable.lev_tolstoi),
     Contact("Marilyn", "Monroe", R.drawable.marilyn_monroe),
     Contact("Van", "Gogh", R.drawable.van_gogh),
     Contact("Emma", avatarResourceId = R.drawable.emma),
-    Contact("Julietta",  avatarResourceId = R.drawable.julietta),
+    Contact("Julietta", avatarResourceId = R.drawable.julietta),
     Contact("Aleksey", "Mikhailov"),
     Contact("Petr")
 ).sortedBy { it.firstName }
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val navController = this.findNavController(R.id.myNavHostFragment)
-        NavigationUI.setupActionBarWithNavController(this,navController)
+        NavigationUI.setupActionBarWithNavController(this, navController)
 
     }
 
