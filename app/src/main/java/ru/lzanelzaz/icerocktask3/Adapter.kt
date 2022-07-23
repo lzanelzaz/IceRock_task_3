@@ -28,7 +28,6 @@ class ItemAdapter(private val dataset: List<Contact>)
         val item = dataset[position]
 
         holder.binding.contact = item
-        //holder.textView.text = "${item.firstName} ${item.lastName}"
         holder.imageView.setImageResource(item.avatarResourceId)
         holder.materialCard.setOnClickListener { view: View ->
             val lastNameShow : Boolean = item.lastName != ""
@@ -37,13 +36,6 @@ class ItemAdapter(private val dataset: List<Contact>)
                 "firstName" to item.firstName,
                 "lastName" to item.lastName,
                 "avatar" to item.avatarResourceId)
-
-//            exitTransition = MaterialElevationScale(false).apply {
-//                duration = 200L
-//            }
-//            reenterTransition = MaterialElevationScale(true).apply {
-//                duration = 200L
-//            }
 
             view.findNavController().navigate(R.id.action_contactsFragment_to_contactFragment, extras,
                 null, FragmentNavigatorExtras(view to "contact_detail"))
