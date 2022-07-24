@@ -8,3 +8,8 @@
 5. На фрагменте ContactsFragment расположить RecyclerView отрисовывающий множество элементов - разные контакты
 6. На фрагменте ContactFragment с помощью ConstraintLayout сверстать UI экрана просмотра контакта
 7. С помощью Android Navigation Component сделать переходы между списком и просмотром контакта
+
+ 
+light mode https://s8.gifyu.com/images/video_2022-07-01_13-20-18.gif
+ 
+dark mode https://s8.gifyu.com/images/video_2022-07-01_13-20-22.gif
